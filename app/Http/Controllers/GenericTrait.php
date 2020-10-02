@@ -39,7 +39,6 @@ trait  GenericTrait
 //  function  Fibonacci number (n):
 function getFib($n)
         {
-            return round(pow((sqrt(5)+1)/2, $n) / sqrt(5)) ?? "-----"    ;
             if($n == 0 ) return 0;
             if($n == 1 ) return 1;
             if($n == 2 ) return 1;
