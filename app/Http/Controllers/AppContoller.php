@@ -21,4 +21,14 @@ class AppContoller extends Controller
         {
             return $this->getFib($n);
         }
+
+        function magic($n)
+        {
+          $myClass = new $this->MagicGetterSetter();
+
+          $myClass->magic = "This is a foo line";
+          return $myClass->magic;
+        }
+
+        
 }

@@ -89,6 +89,8 @@
                     <a href="{{ route('Fibonacci' , 5) }}">Fibonacci Number 5 </a>
                     <a href="{{ route('Fibonacci' , 10) }}">Fibonacci Number 10</a>
                     <a href="{{ route('Fibonacci' , 1) }}">Fibonacci Number 1</a>
+                    <a href="{{ route('magic' , 1) }}">Fibonacci Number 1</a>
+
 
                     <a href="{{ route('home') }}"> Social Network</a>
 

@@ -27,6 +27,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/FizzBuzz', 'AppContoller@FizzBuzz')->name('FizzBuzz');
 // route Fibonacci 
 Route::get('/Fibonacci/{n}', 'AppContoller@Fibonacci')->name('Fibonacci');
+Route::get('/get/magic/{n}', 'AppContoller@magic')->name('magic');
+
 // route posts 
 Route::resource('posts', 'PostController');
 // route comments 
