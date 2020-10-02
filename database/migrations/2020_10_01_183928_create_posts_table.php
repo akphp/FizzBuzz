@@ -14,6 +14,7 @@ class CreatePostsTable extends Migration
     public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('title');
             $table->text('body');
@@ -26,6 +27,7 @@ class CreatePostsTable extends Migration
         });
 
         Schema::create('comments', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->integer('post_id')->unsigned();
@@ -33,10 +35,15 @@ class CreatePostsTable extends Migration
             $table->text('body');
             $table->timestamps();
             $table->softDeletes();
-            // $table->foreign('user_id')->references('id')->on('users');
-            // $table->foreign('post_id')->references('id')->on('post');
-            // $table->foreign('parent_id')->references('id')->on('comments');
+        
         });
+
+        // Schema::table('comments', function($table) {
+        //     // $table->engine = 'InnoDB';
+        //       $table->foreign('user_id')->references('id')->on('users')->onDelete('SET NULL');
+        //     $table->foreign('post_id')->references('id')->on('post')->onDelete('SET NULL');
+        //     $table->foreign('parent_id')->references('id')->on('comments')->onDelete('SET NULL');
+        // });
     }
 
     /**
