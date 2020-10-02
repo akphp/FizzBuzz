@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Exception;
 
 // trait MagicGetterSetter
-trait  MagicGetterSetter
+trait  GenericTrait
 {
      
     // Variable  magic
@@ -40,6 +40,10 @@ trait  MagicGetterSetter
 function getFib($n)
         {
             return round(pow((sqrt(5)+1)/2, $n) / sqrt(5)) ?? "-----"    ;
+            if($n == 0 ) return 0;
+            if($n == 1 ) return 1;
+            if($n == 2 ) return 1;
+            return  $this->getFib($n-1) +  $this->getFib($n - 2);
         }
 
 }

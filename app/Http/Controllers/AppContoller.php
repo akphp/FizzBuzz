@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class AppContoller extends Controller
 {
-    use MagicGetterSetter;
+    use GenericTrait;
    
     //  FizzBuzz  loop that will print all the numbers for the range, 1-20
      public function FizzBuzz()
